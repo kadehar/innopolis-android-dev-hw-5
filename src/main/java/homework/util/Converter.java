@@ -9,8 +9,9 @@ import static java.util.stream.Collectors.counting;
 import static java.util.stream.Collectors.groupingBy;
 
 public class Converter {
-    public HashMap<String, Long> toMap(ArrayList<String> list) {
+    public HashMap<String, Long> toMap(ArrayList<String> list, String filter) {
         return list.stream()
+                .filter(str -> str.matches(filter))
                 .collect(groupingBy(
                         Function.identity(),
                         HashMap::new,

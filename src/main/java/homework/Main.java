@@ -1,6 +1,7 @@
 package homework;
 
 import homework.parser.BufferedParser;
+import homework.parser.Roots;
 import homework.parser.ScannerParser;
 import homework.table.MultiplicationTable;
 import homework.util.WordsCounter;
@@ -25,8 +26,8 @@ public class Main {
 
         WordsCounter counter = new WordsCounter();
         counter.count("Using Scanner class",
-                scannerList, "страд");
+                scannerList, Roots.SUFFERING.pattern());
         counter.count("Using BufferedReader class",
-                bufferedList, "страд");
+                bufferedList, Roots.SUFFERING.pattern());
     }
 }
